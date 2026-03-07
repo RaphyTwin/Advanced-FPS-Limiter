@@ -7,7 +7,10 @@
   "authors": [
     "RaphyTwin"
   ],
-  "contact": {},
+  "contact": {
+    "issues": "https://github.com/RaphyTwin/Advanced-FPS-Limiter/issues",
+    "sources": "https://github.com/RaphyTwin/Advanced-FPS-Limiter"
+  },
   "license": "MIT",
   "icon": "assets/advanced_fps_limiter/icon.png",
   "environment": "client",
