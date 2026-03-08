@@ -55,6 +55,7 @@ modrinth {
     projectId = "advanced-fps-limiter"
     versionType = "release"
     uploadFile = remapJar
+    syncBodyFrom = rootProject.file("README.md").text
     gameVersions = [
             "21w19a",
             "21w20a",
