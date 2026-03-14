@@ -1,19 +1,29 @@
 Tired of jittery FPS? **Advanced FPS Limiter** replaces Minecraft’s loose FPS limiter with rock-solid, precise frame
 pacing for a butter-smooth experience.
 
-#
+---
 
-### The Problem: Vanilla's "Suggestion"
+### What this mod does
 
-Most players don't realize that Minecraft’s built-in FPS limiter is more of a suggestion than a rule. Even when locked
-at 60 FPS, the game often delivers frames at irregular intervals, leading to micro-stuttering and uneven frame times.
+This mod greatly improves minecraft's native FPS limiter. <br>
+This can help with:
 
-<br>
+* more stable frame rate
+* lower power consumption (especially useful for laptop users)
+* smoother and more consistent gameplay
 
-### The Solution: Precision Control
+Limiting FPS is especially useful when your system produces far more frames than your monitor can display, which
+otherwise causes unnecessary GPU workload.
 
-**Advanced FPS Limiter** reworks the internal timing engine to ensure that your frames are delivered exactly when they
-should be. No more spikes, no more jitter—just a nearly perfectly flat frame-time graph.
+---
+
+### When this mod is useful
+
+This mod is particularly useful if you:
+
+* want to cap your FPS to an exact value (for example 60, 90 or 120)
+* want stable frame pacing
+* want to reduce unnecessary GPU usage
 
 ---
 
