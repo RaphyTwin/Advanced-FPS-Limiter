@@ -2,10 +2,10 @@
   "required": true,
   "minVersion": "0.8",
   "package": "de.raphy.advanced_fps_limiter.client.mixins",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_25",
   "mixins": [],
   "client": [
-    "RenderSystemMixin"
+    "FramerateLimiterMixin"
   ],
   "injectors": {
     "defaultRequire": 1

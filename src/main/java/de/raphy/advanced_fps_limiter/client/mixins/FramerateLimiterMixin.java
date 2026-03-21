@@ -1,26 +1,26 @@
 package de.raphy.advanced_fps_limiter.client.mixins;
 
-import com.mojang.blaze3d.systems.RenderSystem;
+import net.minecraft.client.FramerateLimiter;
 import org.lwjgl.glfw.GLFW;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.concurrent.locks.LockSupport;
 
-@Mixin(RenderSystem.class)
-public class RenderSystemMixin {
+@Mixin(FramerateLimiter.class)
+public class FramerateLimiterMixin {
 
-    @Unique
-    private static long lastFrameTime = System.nanoTime();
+    @Shadow
+    private static long lastFrameTime;
 
     @Inject(method = "limitDisplayFPS", at = @At("HEAD"), cancellable = true)
-    private static void limitDisplayFPS(int fps, CallbackInfo ci) {
+    private static void limitDisplayFPS(int framerateLimit, CallbackInfo ci) {
         ci.cancel();
 
-        long targetInterval = 1_000_000_000L / fps;
+        long targetInterval = 1_000_000_000L / framerateLimit;
         long now = System.nanoTime();
         long nextTick = lastFrameTime + targetInterval;
         if (now - nextTick > targetInterval) nextTick = now;
